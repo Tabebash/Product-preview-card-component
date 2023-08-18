@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position:fixed; bottom:0;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --DARK-CYAN: hsl(158, 36%, 37%);
+      --CREAM: hsl(30, 38%, 92%);
+      --DARK-BLUE: hsl(212, 21%, 14%);
+      --GRAYISH-BLUE: hsl(228, 12%, 48%);
+      --WHITE: hsl(0, 0%, 100%);
+    }
+
+    html {
+      font-size: 14px;
+      font-family: "montserrat", sans-serif;
+      color: var(--GRAYISH-BLUE);
+    }
+
+    body {
+      background-color: var(--CREAM);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 330px;
+      border-radius: 10px;
+      background-color: var(--WHITE);
+    }
+
+    .card-img-lg {
+      display: none;
+    }
+
+    .card-img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      width: 100%;
+    }
+
+    .card-body {
+      margin: 1.6rem 1.3rem;
+    }
+
+    .card-pre-header {
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-size: 0.85rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .card-header {
+      font-size: 2.2rem;
+      font-family: "fraunces", serif;
+      margin-top: 0;
+      font-weight: 700;
+      color: var(--DARK-BLUE);
+      margin-bottom: 0;
+      line-height: 2.25rem;
+    }
+
+    .card-text {
+      line-height: 1.6rem;
+      margin-top: 1.1rem;
+    }
+
+    .card-price {
+      font-size: 2rem;
+      color: var(--DARK-CYAN);
+      font-family: "fraunces", serif;
+      margin: 1.4rem 0rem 1.2rem 0rem;
+      font-weight: 700;
+    }
+
+    .card-price::after {
+      content: "$169.99";
+      text-decoration: line-through;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--GRAYISH-BLUE);
+      margin-left: 1.5rem;
+      vertical-align: top;
+      margin-top: 0.6rem;
+      display: inline-block;
+    }
+
+    .card-btn {
+      width:100%;
+      padding: 1rem;
+      color: var(--WHITE);
+      background-color: var(--DARK-CYAN);
+      border-style: none;
+      border-radius: 10px;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .card-btn img {
+      vertical-align: middle;
+    }
+
+    .card-btn:hover {
+      background-color: hsl(158, 36%, 20%);
+    }
+
+    @media (min-width: 1440px) {
+
+      .card-img-lg {
+        display: inline;
+        width: 100%;
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+      }
+
+      .card-img {
+        display: none;
+      }
+
+      .card {
+        display: flex;
+        width: 620px;
+      }
+
+      .card-body {
+        width: 40%;
+      }
+
+      .card-img-container {
+        width: 50%;
+      }
+
+      .card-body {
+        margin: 2.1rem 2.6rem;
+      }
+
+      .card-pre-header {
+        margin-top: 0.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .card-text {
+        margin-top: 2rem;
+      }
+     
+      .card-price {
+        margin: 2rem 0;
+      }
+
+      .lg-br::before {
+        content: " ";
+        display: inline-block;
+        margin-left: 0.4rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-img-container">
+      <img src="./images/image-product-mobile.jpg" alt="perfume" class="card-img">
+      <img src="./images/image-product-desktop.jpg" alt="perfume" class="card-img-lg">
+    </div>
+    <div class="card-body">
+      <p class="card-pre-header">perfume</p>
+      <h2 class="card-header">Gabrielle Essence Eau <span class="lg-br">De</span> Parfum</h2>
+      <p class="card-text">A floral, solar and voluptuous interpretation composed by Olivier <!-- <br> --> Polge, Perfumer-Creator for the House of CHANEL.</p>
+      <p class="card-price">$149.99</p>
+      <button class="card-btn"><img src="./images/icon-cart.svg" alt="cart icon"> &nbsp; Add to Cart</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
